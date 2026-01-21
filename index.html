@@ -18,13 +18,24 @@
       }
       .bg-warm-off-white { background-color: #fcfbf7; }
       .text-charcoal { color: #2d2d2d; }
-      /* Updated Sage to match the vibrant green from the logo symbol */
-      .bg-sage { background-color: #4CAF50; }
-      .text-sage { color: #4CAF50; }
-      .border-sage { border-color: #4CAF50; }
+      /* Matched to the vibrant green in your logo */
+      .bg-sage { background-color: #38b000; }
+      .text-sage { color: #38b000; }
+      .border-sage { border-color: #38b000; }
       
-      .hover\:bg-sage:hover { background-color: #45a049; }
-      .selection\:bg-sage::selection { background-color: #4CAF50; }
+      .hover\:bg-sage:hover { background-color: #2d8a00; }
+      .selection\:bg-sage::selection { background-color: #38b000; color: white; }
+
+      /* Smooth reveal animation */
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s ease-out;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
     </style>
   <script type="importmap">
 {
@@ -37,7 +48,9 @@
 }
 </script>
 </head>
-  <body class="bg-warm-off-white text-charcoal selection:bg-sage selection:text-white">
+  <body class="bg-warm-off-white text-charcoal selection:bg-sage">
     <div id="root"></div>
+    <!-- CRITICAL: This script tag loads your app -->
+    <script type="module" src="index.tsx"></script>
   </body>
 </html>

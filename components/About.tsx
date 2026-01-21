@@ -1,54 +1,63 @@
 
 import React from 'react';
-import { Globe, GraduationCap, Microscope, Database } from 'lucide-react';
+import { GraduationCap, Database, ShieldCheck, Zap } from 'lucide-react';
 
 export const About: React.FC = () => {
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-32 bg-white">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <div className="order-2 lg:order-1 relative">
-            <div className="aspect-[4/5] bg-warm-off-white relative overflow-hidden rounded-sm shadow-2xl">
-              {/* Founder Image - User to replace with founder.jpg */}
+            <div className="aspect-[3/4] bg-warm-off-white relative overflow-hidden rounded-sm shadow-2xl">
               <img 
-                src="https://raw.githubusercontent.com/stackblitz/stackblitz-images/main/zuri-founder.jpg" 
+                src="founder.jpg" 
                 alt="Founder of Geospatial Zuri" 
-                className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+                className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-1000"
                 onError={(e) => {
                    e.currentTarget.src = "https://picsum.photos/seed/portrait/800/1000";
                 }}
               />
-              <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-charcoal/80 to-transparent text-white">
-                <p className="font-serif text-3xl mb-1">Meet the Founder</p>
-                <p className="text-sage text-sm uppercase tracking-widest font-medium">Lead Climate Strategist</p>
+              <div className="absolute bottom-0 left-0 w-full p-10 bg-gradient-to-t from-charcoal/90 to-transparent text-white">
+                <p className="font-serif text-4xl mb-2">Meet the Founder</p>
+                <p className="text-sage text-sm uppercase tracking-[0.3em] font-bold">Lead Climate Risk Strategist</p>
               </div>
             </div>
-            <div className="absolute -top-6 -left-6 w-32 h-32 border-t-2 border-l-2 border-sage opacity-30" />
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 border-b-2 border-r-2 border-sage opacity-30" />
+            <div className="absolute -top-8 -left-8 w-48 h-48 border-t-4 border-l-4 border-sage opacity-20" />
+            <div className="absolute -bottom-8 -right-8 w-48 h-48 border-b-4 border-r-4 border-sage opacity-20" />
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="mb-8">
-              <h4 className="text-sage font-medium tracking-[0.2em] uppercase text-xs mb-4">Our Leadership</h4>
-              <h2 className="text-4xl md:text-5xl font-semibold mb-8">Expertise in <span className="italic">Environmental Intelligence</span>.</h2>
-              <p className="text-gray-600 leading-relaxed text-lg mb-6">
-                Geospatial Zuri was founded with a clear vision: to make high-level climate data accessible and actionable for those who need it most.
+            <div className="mb-12">
+              <h4 className="text-sage font-medium tracking-[0.3em] uppercase text-xs mb-6">Our Leadership</h4>
+              <h2 className="text-5xl md:text-6xl font-semibold mb-8 leading-tight">Expertise in <span className="italic">Environmental Intelligence</span>.</h2>
+              <p className="text-gray-600 leading-relaxed text-xl mb-8">
+                Geospatial Zuri was founded with a clear vision: to make high-level climate data accessible and actionable for the organizations building our future.
               </p>
-              <p className="text-gray-600 leading-relaxed text-lg italic border-l-2 border-sage pl-6">
-                "We don't just provide maps; we provide the narrative that helps organizations navigate the complexities of environmental change."
-              </p>
+              <div className="bg-warm-off-white p-8 border-l-4 border-sage shadow-sm">
+                <p className="text-charcoal leading-relaxed text-xl italic font-serif">
+                  "We don't just provide maps; we provide the narrative that helps leaders navigate the profound complexities of environmental change."
+                </p>
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
-              <div className="p-4 border border-gray-50 bg-warm-off-white/50">
-                <GraduationCap className="text-sage mb-3" size={24} />
-                <h4 className="font-semibold mb-1">Academic Rigor</h4>
-                <p className="text-xs text-gray-500">Grounded in advanced climate science and research.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
+              <div className="flex gap-4">
+                <div className="shrink-0 w-12 h-12 bg-sage/10 flex items-center justify-center rounded-full text-sage">
+                  <GraduationCap size={24} />
+                </div>
+                <div>
+                  <h4 className="font-bold text-charcoal mb-1">Academic Rigor</h4>
+                  <p className="text-sm text-gray-500">Deep background in climate science and research-based methodologies.</p>
+                </div>
               </div>
-              <div className="p-4 border border-gray-50 bg-warm-off-white/50">
-                <Database className="text-sage mb-3" size={24} />
-                <h4 className="font-semibold mb-1">Advanced GIS</h4>
-                <p className="text-xs text-gray-500">Utilizing state-of-the-art spatial analysis tools.</p>
+              <div className="flex gap-4">
+                <div className="shrink-0 w-12 h-12 bg-sage/10 flex items-center justify-center rounded-full text-sage">
+                  <Database size={24} />
+                </div>
+                <div>
+                  <h4 className="font-bold text-charcoal mb-1">Spatial Power</h4>
+                  <p className="text-sm text-gray-500">Leveraging high-resolution GIS and remote sensing data.</p>
+                </div>
               </div>
             </div>
           </div>

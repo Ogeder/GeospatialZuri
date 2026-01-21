@@ -37,15 +37,15 @@ const App: React.FC = () => {
       <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-5'}`}>
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            {/* Logo Image placeholder - user to replace src with actual path to logo-full.png */}
             <img 
-              src="https://raw.githubusercontent.com/stackblitz/stackblitz-images/main/zuri-logo-full.png" 
+              src="logo-full.png" 
               alt="Geospatial Zuri" 
-              className="h-10 md:h-12 w-auto object-contain"
+              className="h-10 md:h-14 w-auto object-contain"
               onError={(e) => {
-                // Fallback if image path not yet set up
                 e.currentTarget.style.display = 'none';
-                e.currentTarget.parentElement?.insertAdjacentHTML('afterbegin', '<span class="font-serif text-xl font-bold">Geospatial Zuri</span>');
+                if (e.currentTarget.parentElement) {
+                  e.currentTarget.parentElement.innerHTML = '<span class="font-serif text-2xl font-bold">Geospatial Zuri</span>';
+                }
               }}
             />
           </div>
@@ -56,7 +56,7 @@ const App: React.FC = () => {
               <a 
                 key={link.name} 
                 href={link.href} 
-                className="text-sm font-medium hover:text-green-600 transition-colors"
+                className={`text-sm font-medium transition-colors ${scrolled ? 'text-charcoal hover:text-sage' : 'text-charcoal hover:text-sage'}`}
               >
                 {link.name}
               </a>
