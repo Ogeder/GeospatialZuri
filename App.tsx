@@ -38,7 +38,7 @@ const App: React.FC = () => {
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <img 
-              src="logo-full.png" 
+              src="/images/logo-full.png" 
               alt="Geospatial Zuri" 
               className="h-10 md:h-14 w-auto object-contain"
               onError={(e) => {

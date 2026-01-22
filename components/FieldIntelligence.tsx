@@ -19,7 +19,7 @@ export const FieldIntelligence: React.FC = () => {
           <div className="space-y-8">
             <div className="aspect-[16/10] bg-gray-200 overflow-hidden rounded-sm shadow-xl group border-b-8 border-sage">
               <img 
-                src="flood-wetland.jpg" 
+                src="/images/flood-wetland.jpg" 
                 alt="Wetland environment" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 onError={(e) => {
@@ -37,7 +37,7 @@ export const FieldIntelligence: React.FC = () => {
           <div className="space-y-8 md:mt-32">
             <div className="aspect-[16/10] bg-gray-200 overflow-hidden rounded-sm shadow-xl group border-b-8 border-charcoal">
               <img 
-                src="flood-tree.jpg" 
+                src="/images/flood-tree.jpg" 
                 alt="Climate impact" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 onError={(e) => {

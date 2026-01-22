@@ -10,7 +10,7 @@ export const About: React.FC = () => {
           <div className="order-2 lg:order-1 relative">
             <div className="aspect-[3/4] bg-warm-off-white relative overflow-hidden rounded-sm shadow-2xl">
               <img 
-                src="founder.jpg" 
+                src="/images/founder.jpg" 
                 alt="Founder of Geospatial Zuri" 
                 className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-1000"
                 onError={(e) => {

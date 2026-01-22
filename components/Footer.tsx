@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-4 mb-8">
               <img 
-                src="symbol-black.png" 
+                src="/images/symbol-black.png" 
                 alt="Zuri Symbol" 
                 className="h-12 w-auto"
                 onError={(e) => {

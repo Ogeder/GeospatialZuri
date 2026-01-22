@@ -51,7 +51,7 @@ export const Hero: React.FC = () => {
           <div className="relative h-[450px] lg:h-[700px] w-full">
             <div className="absolute inset-0 bg-sage/5 rounded-sm overflow-hidden shadow-2xl rotate-1">
               <img 
-                src="flood-hero.jpg" 
+                src="/images/flood-hero.jpg" 
                 alt="Environmental context" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -62,7 +62,7 @@ export const Hero: React.FC = () => {
             </div>
             {/* Design Element - Green Symbol Overlay */}
             <div className="absolute -top-10 -right-10 w-40 h-40 opacity-20 pointer-events-none">
-              <img src="symbol-green.png" alt="" className="w-full h-full object-contain" />
+              <img src="/images/symbol-green.png" alt="" className="w-full h-full object-contain" />
             </div>
             {/* Floating UI Elements */}
             <div className="absolute -bottom-8 -left-8 bg-white p-8 shadow-2xl max-w-[240px] border-l-8 border-sage">
